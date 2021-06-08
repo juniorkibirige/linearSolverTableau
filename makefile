@@ -30,6 +30,7 @@ clean:
 
 # http://www.gnu.org/software/make/manual/make.html#Phony-Targets
 .PHONY: build clean
+Debug: build
 
 $(EXECUTABLE_FILES): $(OBJECT_FILES)
 	@$(CC) $(LDFLAGS) -o $@ $^
