@@ -10,8 +10,11 @@ Tableau tab  = { 4, 4, {                     // Size of tableau [4 rows x 5 colu
 };
 
 int main(int argc, char *argv[]){
-    printf("LP Problem Solving Programme\r\nBy: Kibirige Junior Lawrence\r\nRegistration Number: 18/U/25567/EVE\r\nStudent Number: 1800725567");
-    printf("");
+    printf("LP Problem Solving Programme "\
+    "\r\nBy: Kibirige Junior Lawrence"\
+    "\r\nRegistration Number: 18/U/25567/EVE"\
+    "\r\nStudent Number: 1800725567\r\n");
+    printf("\r\n");
     if (argc > 1) { // usage: cmd datafile
         readTableau(&tab, argv[1]);
     } else {

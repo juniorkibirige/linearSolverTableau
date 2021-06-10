@@ -5,23 +5,23 @@ void printTableau(Tableau *tab, const char* mes) {
   static int counter=0;
   int i, j;
   printf("\n%d. Tableau %s:\n", ++counter, mes);
-  nl(70);
+  nl(84);
 
-  printf("%-6s%5s", "col:", "b[i]");
-  for(j=1;j<tab->n; j++) { printf("    x%d,", j); } printf("\n");
+  printf("| %-6s%5s | ", "col: | ", "  b[i] ");
+  for(j=1;j<tab->n; j++) { printf("    x%d   | ", j); } printf("\n");
 
   for(i=0;i<tab->m; i++) {
-    if (i==0) printf("max:"); else
-    printf("b%d: ", i);
+    if (i==0) printf("| max: |"); else
+    printf("|  b%d: |", i);
     for(j=0;j<tab->n; j++) {
       if (equal((int)tab->mat[i][j], tab->mat[i][j]))
-        printf(" %6d", (int)tab->mat[i][j]);
+        printf("  %6d | ", (int)tab->mat[i][j]);
       else
-        printf(" %6.2lf", tab->mat[i][j]);
+        printf("  %6.2lf | ", tab->mat[i][j]);
       }
     printf("\n");
   }
-  nl(70);
+  nl(84);
 }
 
 /* Example input file for readTableau:
